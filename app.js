@@ -130,7 +130,7 @@ app.post("/viewQuestions", (req, res) => {   //change data table also
     null,
     {
       skip: Number(req.body.start),
-      limit: Number(req.body.length),  //delimiter not working..
+      limit: Number(req.body.length),  //delimiter not working in present phase..
       sort: sort
     },
     (err, data) => {
