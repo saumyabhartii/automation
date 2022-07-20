@@ -12,7 +12,7 @@ const contactContent = "contact page";
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://nikhilstacks:test123@cluster0.rzizx.mongodb.net/blogDB?retryWrites=true&w=majority"
+  "mongodb+srv://saumyaabhiraj:test123@cluster0.rzizx.mongodb.net/blogDB?retryWrites=true&w=majority"
 );
 
 const postSchema = {
@@ -92,7 +92,7 @@ app.post("/compose", function (req, res) {
   });
   post.save(function (err) {
     if (!err) {
-      res.redirect("/");
+      res.redirect("/");  //callback funtion every save to back to home
     }
   });
 });
@@ -143,6 +143,6 @@ app.post("/viewQuestions", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server started on port 3000");
+app.listen(3000, function () {
+  console.log("Server started on port 3000");   //callback function
 });
