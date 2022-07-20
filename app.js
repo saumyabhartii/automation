@@ -116,7 +116,7 @@ app.post("/viewQuestions", (req, res) => {   //change data table also
   });
 
   //for searching....
-  if (req.body.search.value) {
+  if (req.body.search.value) {     //searching is not working...
     var regex = new RegExp(req.body.search.value, "i");
     searchStr = { $or: [{ name: regex }, { email: regex }, { city: regex }] };
   } else {
