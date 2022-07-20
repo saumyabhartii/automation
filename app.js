@@ -69,7 +69,7 @@ app.get("/compose", function (req, res) {
 app.get("/posts/:postId", function (req, res) {
   const requestedPostId = req.params.postId;
 
-  Post.findOne(
+  Post.findOne(                         //use mongoose
     {
       _id: requestedPostId,
     },
