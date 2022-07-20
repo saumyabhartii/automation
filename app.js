@@ -13,7 +13,7 @@ const app = express();
 
 mongoose.connect(
   "mongodb+srv://saumyaabhiraj:test123@cluster0.rzizx.mongodb.net/blogDB?retryWrites=true&w=majority"
-);
+);  //encode this key
 
 const postSchema = {
   code: String,
@@ -83,7 +83,7 @@ app.get("/posts/:postId", function (req, res) {
   );
 });
 
-app.post("/compose", function (req, res) {
+app.post("/compose", function (req, res) {  //change this composed value to state
   const post = new Post({
     code: req.body.composeCode,
     title: req.body.composeTitle,
