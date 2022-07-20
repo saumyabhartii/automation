@@ -97,7 +97,7 @@ app.post("/compose", function (req, res) {  //change this composed value to stat
   });
 });
 
-app.post("/viewQuestions", (req, res) => {
+app.post("/viewQuestions", (req, res) => {   //change data table also
   // for odering of data according to coloumssss....
   let order = req.body.order[0];
   if (order.column == "3") {
