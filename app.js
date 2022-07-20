@@ -33,7 +33,7 @@ app.use(
 );
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
+app.get("/", function (req, res) {    //use different rendering method
   Post.find({}, function (err, foundPosts) {
     res.render("home", {
       homeContent: homeStartingContent,
