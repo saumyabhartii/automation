@@ -3,3 +3,4 @@ const fiddle = {
     ver: 0.098,
     embiguity: "serverless"
 }
+throw fiddle;
